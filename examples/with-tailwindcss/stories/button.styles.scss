@@ -1,0 +1,42 @@
+@layer components {
+  .button-base {
+    @apply my-2 w-full rounded-full flex relative justify-center items-center min-w-fit text-lg;
+
+    @apply before:transition-all before:ease-in-out;
+  }
+
+  .button-small {
+    @apply max-w-max;
+  }
+
+  .button-outlined {
+    @apply border text-color-6 border-color-4 fill-current bg-transparent px-8 h-16;
+
+    @apply hover:border-color-6 active:border-color-8 active:text-color-8;
+
+    @apply disabled:border-color-3 disabled:text-color-3 disabled:cursor-not-allowed;
+  }
+
+  .button-solid {
+    @apply bg-red-500 px-2 h-12;
+
+    /* Overlay for hover and active states */
+    @apply before:block before:-inset-0 before:bg-black before:absolute before:rounded-full before:hover:opacity-10 before:opacity-0 before:active:opacity-20 z-0;
+
+    /* Disabled styles */
+    @apply disabled:text-color-8 disabled:text-opacity-60 disabled:bg-none disabled:bg-color-3 disabled:hover:before:opacity-0 disabled:cursor-not-allowed;
+  }
+
+  .button-success {
+    @apply bg-none bg-color-3 text-color-9 cursor-default;
+
+    @apply before:hidden;
+  }
+
+  .button-loading {
+    @apply text-color-9 cursor-wait;
+
+    /* Dark Overlay */
+    @apply before:opacity-20;
+  }
+}

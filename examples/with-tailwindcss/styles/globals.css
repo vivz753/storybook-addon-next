@@ -1,3 +1,33 @@
+@import url('./../stories/button.styles.scss');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-0: theme(colors.light.0);
+    --color-1: theme(colors.light.1);
+    --color-2: theme(colors.light.2);
+    --color-3: theme(colors.light.3);
+    --color-4: theme(colors.light.4);
+    --color-5: theme(colors.light.5);
+    --color-6: theme(colors.light.6);
+    --color-7: theme(colors.light.7);
+    --color-8: theme(colors.light.8);
+    --color-9: theme(colors.light.9);
+  }
+
+  .dark {
+    --color-0: theme(colors.dark.0);
+    --color-1: theme(colors.dark.1);
+    --color-2: theme(colors.dark.2);
+    --color-3: theme(colors.dark.3);
+    --color-4: theme(colors.dark.4);
+    --color-5: theme(colors.dark.5);
+    --color-6: theme(colors.dark.6);
+    --color-7: theme(colors.dark.7);
+    --color-8: theme(colors.dark.8);
+    --color-9: theme(colors.dark.9);
+  }
+}
